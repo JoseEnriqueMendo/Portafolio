@@ -1,0 +1,287 @@
+.app-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+.subtitle {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 760px;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.introduction-container {
+  max-width: 760px;
+  height: 300px;
+  margin: auto;
+  border-bottom: 0.1px solid white;
+  margin-bottom: 20px;
+}
+
+.name-introduction {
+  font-size: 40px;
+}
+.abstract-introduction {
+  font-size: 20px;
+  margin-top: -30px;
+  margin-left: 3px;
+}
+
+.img-introduction {
+  height: 160px;
+  width: 180px;
+}
+
+.img-introduction-second {
+  position: absolute;
+  height: 220px;
+  width: 220px;
+  top: -28px;
+  left: -36px;
+}
+
+.figure-img-introduction {
+  height: 150px;
+  width: 150px;
+  border: solid 10px #171e2d;
+  border-radius: 100%;
+  background-color: #2d3746;
+  overflow: hidden;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.introduction-container {
+  display: flex;
+  align-items: center;
+}
+
+.left-introduction-container {
+  margin-left: 0px;
+}
+
+.headBoard {
+  background-color: rgb(31 41 55 / 0.97);
+  width: 760px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5px;
+  z-index: 2;
+}
+
+.name-headBoard {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.img-headBoard {
+  height: 35px;
+  width: 35px;
+  border: solid 4px #171e2d;
+  border-radius: 100%;
+  background-color: #2d3746;
+}
+
+.button-headBoard {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  margin-left: -10px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.center-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.button-headBoard > a {
+  text-decoration: none;
+  color: inherit;
+}
+.button-headBoard > a:hover {
+  color: #696a6c;
+}
+
+.img-name-headBoard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -40px;
+}
+
+.headBoard > span {
+  width: 2px;
+  background-color: white;
+  height: 60%;
+}
+
+.extra-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.looking-job-button {
+  background-color: #10b981;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
+  font-weight: 400;
+}
+.cv-button {
+  background-color: #6366f1;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+.estado-icon {
+  margin-top: 2px;
+}
+
+.cv-button:hover {
+  background-color: #585bf7;
+}
+
+.socialCards-container {
+  max-width: 760px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 10px;
+  gap: 20px;
+}
+
+.socialCard {
+  border-radius: 10px;
+  border: 2px solid #2c3643;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  gap: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.img-socialCard {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.socialCard:hover {
+  border: 2px solid #41454a;
+}
+
+.email-container {
+  max-width: 760px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 70px;
+}
+
+.showEmail {
+  width: 600px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #2a3435;
+}
+
+.goEmail,
+.copyEmail {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #5c60de;
+  cursor: pointer;
+}
+
+.iconEmail {
+  width: 100px;
+}
+
+.goEmail:hover,
+.copyEmail:hover {
+  background-color: #585bf7;
+}
+
+#tooltip-style {
+  font-size: 12.5px;
+  margin-top: 2px;
+  background-color: red;
+  color: #171e2d;
+}
+
+.changeImage {
+  animation: changeImage infinite 4s normal;
+}
+
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    visibility: hidden;
+  }
+  51% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+.changeImage2 {
+  animation: changeImage2 infinite 4s linear;
+}
+
+@keyframes changeImage2 {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
