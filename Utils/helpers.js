@@ -1,5 +1,5 @@
 const downloadFile = () => {
-  fetch('http://localhost:5173/src/assets/cv.pdf')
+  fetch('https://portafolio-jose-enrique-mendo-huapayas-projects.vercel.app/src/assets/cv.pdf')
     .then((response) => response.blob())
     .then((blob) => {
       const downloadInstance = document.createElement('a');
