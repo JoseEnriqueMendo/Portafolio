@@ -1,17 +1,16 @@
+import { appFirebase } from '../Utils/fb.js';
+
 const downloadFile = () => {
-  fetch('https://portafolio-jose-enrique-mendo-huapayas-projects.vercel.app/src/assets/cv.pdf')
-    .then((response) => response.blob())
-    .then((blob) => {
-      const downloadInstance = document.createElement('a');
-      downloadInstance.href = URL.createObjectURL(blob);
-      downloadInstance.download = 'JOSE ENRIQUE MH CV.pdf';
-      downloadInstance.style.display = 'none';
-      document.body.appendChild(downloadInstance);
-      downloadInstance.click();
-      document.body.removeChild(downloadInstance);
+  const storage = appFirebase.storage();
+  const storageRef = storage.ref();
+  const fileRef = storageRef.child('Jose enrique mendo huapaya - Curriculum vitae.pdf');
+  fileRef
+    .getDownloadURL()
+    .then((url) => {
+      window.open(url, '_blank');
     })
     .catch((error) => {
-      console.error('Error al descargar el archivo:', error);
+      console.error('Error al obtener URL:', error);
     });
 };
 
