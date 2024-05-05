@@ -2,7 +2,6 @@
   color: white;
   display: flex;
   flex-direction: row;
-  width: 760px;
   height: 250px;
   margin: auto;
   margin-bottom: 20px;
@@ -109,7 +108,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 740px) {
   .container-ProyectCard {
     flex-direction: column;
     height: fit-content;
@@ -137,5 +136,28 @@
   }
   .abstractProyect {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container-ProyectCard {
+    flex-direction: column;
+  }
+  .container-Left {
+    height: 200px;
+  }
+
+  .imgProyect {
+    height: 95%;
+  }
+  .container-Right {
+    padding: 0px;
+    margin: 0px;
+  }
+  .nameProyect,
+  .abstractProyect,
+  .itemTool-container,
+  .view-container {
+    margin-left: 0px;
   }
 }

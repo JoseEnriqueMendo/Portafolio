@@ -1,9 +1,14 @@
 .ExperienceCard-container {
-  width: 760px;
   margin: auto;
 }
 
 .time-ExperienceCard {
   margin-top: -15px;
   font-weight: 400;
+}
+
+@media (max-width: 740px) {
+  .lista-pointFunctionalities {
+    font-size: 15px;
+  }
 }

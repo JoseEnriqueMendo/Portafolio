@@ -4,7 +4,7 @@ import './ExperienceCard.css';
 export const ExperienceCard = ({ placeWork, position, begin, end, functionalities }) => {
   const pointFunctionalities = () => {
     return (
-      <ul>
+      <ul className="lista-pointFunctionalities">
         {functionalities.map((item, index) => {
           return <li key={index}>{item}</li>;
         })}

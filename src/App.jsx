@@ -54,7 +54,7 @@ export const App = () => {
               </div>
               <span></span>
 
-              <div className="button-headBoard marg">
+              <div className="button-headBoard">
                 <a href="#section-Experience">
                   Experiencia <FaBriefcase className="center-icon" />
                 </a>
@@ -177,7 +177,7 @@ export const App = () => {
             linkedin,
             'https://www.linkedin.com/in/jose-enrique-mendo-huapaya-0758ab261/'
           )}
-          {socialCards('Github', github, '')}
+          {socialCards('Github', github, 'https://github.com/JoseEnriqueMendo')}
           {socialCards('Twitter', twitter, '')}
         </div>
       </section>
