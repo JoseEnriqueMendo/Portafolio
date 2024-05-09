@@ -151,7 +151,8 @@ export const App = () => {
           abstractProyect={
             'Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.'
           }
-          urlCode={'https://brisas-marinas-fe-adm.vercel.app'}
+          urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasFE-ADM'}
+          urlLive={'https://brisas-marinas-fe-adm.vercel.app'}
           toolsProyect={[reactLogo, viteLogo]}
         ></ProyectCard>
 

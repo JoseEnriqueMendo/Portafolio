@@ -9,10 +9,8 @@ export const ProyectCard = ({
   abstractProyect,
   toolsProyect,
   urlCode,
+  urlLive,
 }) => {
-  // const urlCode = 'https://www.google.com.mx';
-  const urlLive = 'https://www.google.com.mx';
-
   const iconTool = (item) => {
     return <img src={item} alt="Tool Icon" className="iconTool" />;
   };
