@@ -12,6 +12,7 @@ import linkedin from './assets/linkedin.svg';
 import twitter from './assets/twitter.svg';
 import programador from './assets/programador.png';
 import programador2 from './assets/programador2.png';
+import brisasMarinasAdm from './assets/brisasMarinasAdm.png';
 import { downloadFile, copyText, openEmail } from '../Utils/helpers.js';
 import { Tooltip } from 'react-tooltip';
 
@@ -145,17 +146,18 @@ export const App = () => {
           Proyectos <IoIosStarHalf />
         </h3>
         <ProyectCard
-          imgProyect={
-            'https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/01/what-happened-to-google-play-music-featured-image.jpg'
+          imgProyect={brisasMarinasAdm}
+          nameProyect={'Brisas Marinas Admin Web'}
+          abstractProyect={
+            'Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.'
           }
-          nameProyect={'Fisi Red'}
-          abstractProyect={'Is a website to search for Minecrat profiles skins, cape and More'}
+          urlCode={'https://brisas-marinas-fe-adm.vercel.app'}
           toolsProyect={[reactLogo, viteLogo]}
         ></ProyectCard>
 
         <ProyectCard
           imgProyect={'https://www.ituser.es/files/202305/software-aplicacion-desarrollo.jpg'}
-          nameProyect={'Music App'}
+          nameProyect={'Brisas Marinas cliente Web'}
           abstractProyect={'Play, create playlists, like songs and discover music trends.'}
           toolsProyect={[reactLogo, viteLogo]}
         ></ProyectCard>

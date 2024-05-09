@@ -3,8 +3,14 @@ import './ProyectCard.css';
 import { FaGithub } from 'react-icons/fa';
 import { FaLink } from 'react-icons/fa';
 
-export const ProyectCard = ({ imgProyect, nameProyect, abstractProyect, toolsProyect }) => {
-  const urlCode = 'https://www.google.com.mx';
+export const ProyectCard = ({
+  imgProyect,
+  nameProyect,
+  abstractProyect,
+  toolsProyect,
+  urlCode,
+}) => {
+  // const urlCode = 'https://www.google.com.mx';
   const urlLive = 'https://www.google.com.mx';
 
   const iconTool = (item) => {
