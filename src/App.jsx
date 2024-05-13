@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import { downloadFile, copyText, openEmail } from '../Utils/helpers.js';
+import { Tooltip } from 'react-tooltip';
 import { ProyectCard } from './components/ProyectCard/ProyectCard';
 import { ExperienceCard } from './components/ExperienceCard/ExperienceCard';
 import { IoIosStarHalf } from 'react-icons/io';
 import { FaBriefcase, FaFileDownload, FaCopy } from 'react-icons/fa';
 import { MdEventAvailable, MdContactPhone, MdEmail, MdSend } from 'react-icons/md';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
-import github from './assets/github.svg';
-import linkedin from './assets/linkedin.svg';
-import twitter from './assets/twitter.svg';
-import programador from './assets/programador.png';
-import programador2 from './assets/programador2.png';
-import brisasMarinasAdm from './assets/brisasMarinasAdm.png';
-import { downloadFile, copyText, openEmail } from '../Utils/helpers.js';
-import { Tooltip } from 'react-tooltip';
+import {
+  Post_brisasAdm,
+  Post_brisasBE,
+  Post_brisasCli,
+  Programador_anime,
+  Programador_real,
+} from '../Utils/getImgs.js';
 
+import {
+  Logo_js,
+  Logo_html,
+  Logo_react,
+  Logo_twitter,
+  Logo_linkedin,
+  Logo_github,
+  Logo_vite,
+  Logo_css,
+  Logo_ts,
+  Logo_postgress,
+} from '../Utils/getIcons.js';
+
+import './App.css';
 export const App = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,7 +60,7 @@ export const App = () => {
           {isVisible && (
             <div className="headBoard">
               <div className="img-name-headBoard">
-                <img src={programador} className="img-headBoard" />
+                <img src={Programador_anime} className="img-headBoard" />
                 <a href="#section-introduction" className="name-headBoard">
                   Enrique MH
                 </a>
@@ -79,14 +91,15 @@ export const App = () => {
 
           <div className="left-introduction-container">
             <figure className="figure-img-introduction">
-              <img src={programador} className="img-introduction changeImage" />
-              <img src={programador2} className="img-introduction-second changeImage2" />
+              <img src={Programador_anime} className="img-introduction changeImage" />
+              <img src={Programador_real} className="img-introduction-second changeImage2" />
             </figure>
           </div>
           <div className="rigth-introduction-container">
             <h1 className="name-introduction">Jose Enrique Mendo H.</h1>
             <p className="abstract-introduction">
-              ¡Hola! Soy un apasionado desarrollador web Junior especializado en el backend.
+              ¡Hola! Soy un desarrollador web junior apasionado con conocimientos tanto en el
+              backend como en el frontend.
             </p>
 
             <div className="extra-buttons-container">
@@ -118,25 +131,15 @@ export const App = () => {
         </h3>
 
         <ExperienceCard
-          placeWork={' CEFIS Fisioterapia'}
-          position={'Jr Front-End Developer'}
-          begin={'Jan 2023 '}
-          end={'Jan 2024'}
+          placeWork={'Sin Experiencia'}
+          position={'Buscando Trabajo'}
+          begin={'Disponibilidad '}
+          end={' Inmediata'}
           functionalities={[
-            'Administration Dashboard with React and NextJs for the management of patients, appointments, and services performed daily by a physiotherapy center.',
-            'Designing a user interface from scratch and implementing it in a web interface using TailwindCSS.',
-            'It increased the data capture speed of patients by 200% and improved efficiency in managing appointments and services.',
-          ]}
-        ></ExperienceCard>
-        <ExperienceCard
-          placeWork={' CEFIS Fisioterapia'}
-          position={'Jr Front-End Developer'}
-          begin={'Jan 2023 '}
-          end={'Jan 2024'}
-          functionalities={[
-            'Administration Dashboard with React and NextJs for the management of patients, appointments, and services performed daily by a physiotherapy center.',
-            'Designing a user interface from scratch and implementing it in a web interface using TailwindCSS.',
-            'It increased the data capture speed of patients by 200% and improved efficiency in managing appointments and services.',
+            'Tengo conocimientos sólidos en HTML, CSS y JavaScript.',
+            'Estoy enfocado en aprender y mejorar constantemente para ofrecer soluciones eficientes.',
+            'Soy capaz de trabajar en equipo y comunicarme efectivamente.',
+            'Estoy familiarizado con herramientas modernas como React.js, Vue.js, MySQL y MongoDB.',
           ]}
         ></ExperienceCard>
       </section>
@@ -146,27 +149,35 @@ export const App = () => {
           Proyectos <IoIosStarHalf />
         </h3>
         <ProyectCard
-          imgProyect={brisasMarinasAdm}
+          imgProyect={Post_brisasBE}
+          nameProyect={'Brisas Marinas Backend'}
+          abstractProyect={
+            'Brisas Marinas Backend: Servicio integral que gestiona datos para Brisa Admin y Cliente, optimizando la experiencia y operaciones de la cevichería online.'
+          }
+          toolsProyect={[Logo_js, Logo_postgress]}
+          urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasBE'}
+        ></ProyectCard>
+
+        <ProyectCard
+          imgProyect={Post_brisasAdm}
           nameProyect={'Brisas Marinas Admin Web'}
           abstractProyect={
             'Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.'
           }
           urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasFE-ADM'}
           urlLive={'https://brisas-marinas-fe-adm.vercel.app'}
-          toolsProyect={[reactLogo, viteLogo]}
+          toolsProyect={[Logo_react, Logo_vite, Logo_ts, Logo_html, Logo_css]}
         ></ProyectCard>
 
         <ProyectCard
-          imgProyect={'https://www.ituser.es/files/202305/software-aplicacion-desarrollo.jpg'}
+          imgProyect={Post_brisasCli}
           nameProyect={'Brisas Marinas cliente Web'}
-          abstractProyect={'Play, create playlists, like songs and discover music trends.'}
-          toolsProyect={[reactLogo, viteLogo]}
-        ></ProyectCard>
-        <ProyectCard
-          imgProyect={'https://www.ituser.es/files/202305/software-aplicacion-desarrollo.jpg'}
-          nameProyect={'Music App'}
-          abstractProyect={'Play, create playlists, like songs and discover music trends.'}
-          toolsProyect={[reactLogo, viteLogo]}
+          abstractProyect={
+            'Brisas Marinas Cliente Web: Explora y compra platos marinos con navegación intuitiva, mejorando la experiencia y alcanze de la cevichería.'
+          }
+          toolsProyect={[Logo_react, Logo_vite, Logo_ts, Logo_html, Logo_css]}
+          urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasFE-CLI'}
+          urlLive={'https://brisas-marinas-fe-cli.vercel.app/'}
         ></ProyectCard>
       </section>
 
@@ -177,11 +188,11 @@ export const App = () => {
         <div className="socialCards-container">
           {socialCards(
             'Linkedin',
-            linkedin,
+            Logo_linkedin,
             'https://www.linkedin.com/in/jose-enrique-mendo-huapaya-0758ab261/'
           )}
-          {socialCards('Github', github, 'https://github.com/JoseEnriqueMendo')}
-          {socialCards('Twitter', twitter, '')}
+          {socialCards('Github', Logo_github, 'https://github.com/JoseEnriqueMendo')}
+          {socialCards('Twitter', Logo_twitter, '')}
         </div>
       </section>
 
