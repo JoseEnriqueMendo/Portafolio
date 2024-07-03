@@ -3,7 +3,7 @@
     "nameProyect": "Brisas Marinas Backend",
     "abstractProyect": "Brisas Marinas Backend: Servicio integral que gestiona datos para Brisa Admin y Cliente, optimizando la experiencia y operaciones de la cevichería online.",
     "imgProyect": "imgs/brisasImgBE.png",
-    "toolsProyect": ["../src/assets/icons/js.svg", "../src/assets/icons/postgres.svg"],
+    "toolsProyect": ["/icons/js.svg", "/icons/postgres.svg"],
     "urlCode": "https://github.com/JoseEnriqueMendo/BrisasMarinasBE",
     "urlLive": "",
     "type": "backend"
@@ -13,10 +13,10 @@
     "abstractProyect": "Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.",
     "imgProyect": "imgs/brisasMarinasAdm.png",
     "toolsProyect": [
-      "../src/assets/icons/react.svg",
-      "../src/assets/icons/vite.svg",
-      "../src/assets/icons/html.svg",
-      "../src/assets/icons/css.svg"
+      "/icons/react.svg",
+      "/icons/vite.svg",
+      "/icons/html.svg",
+      "/icons/css.svg"
     ],
     "urlCode": "https://github.com/JoseEnriqueMendo/BrisasMarinasFE-ADM",
     "urlLive": "https://brisas-marinas-fe-adm.vercel.app",
@@ -27,11 +27,11 @@
     "abstractProyect": "Brisas Marinas Cliente Web: Explora y compra platos marinos con navegación intuitiva, mejorando la experiencia y alcanze de la cevichería.",
     "imgProyect": "imgs/brisasImgBE.png",
     "toolsProyect": [
-      "../src/assets/icons/react.svg",
-      "../src/assets/icons/vite.svg",
-      "../src/assets/icons/ts.svg",
-      "../src/assets/icons/html.svg",
-      "../src/assets/icons/css.svg"
+      "/icons/react.svg",
+      "/icons/vite.svg",
+      "/icons/ts.svg",
+      "/icons/html.svg",
+      "/icons/css.svg"
     ],
     "urlCode": "https://github.com/JoseEnriqueMendo/BrisasMarinasFE-CLI",
     "urlLive": "https://brisas-marinas-fe-cli.vercel.app/",
@@ -42,10 +42,10 @@
     "abstractProyect": "Proyecto Cooking BE: Aloja servicios de  gestión, autenticación de usuarios, el almacenamiento y la búsqueda de recetas, e integra una búsqueda dinámica para una página de recetas.",
     "imgProyect": "/imgs/img_cookingRecipesWebBE.png",
     "toolsProyect": [
-      "../src/assets/icons/js.svg",
-      "../src/assets/icons/postgres.svg",
-      "../src/assets/icons/sequelize.svg",
-      "../src/assets/icons/postman.svg"
+      "/icons/js.svg",
+      "/icons/postgres.svg",
+      "/icons/sequelize.svg",
+      "/icons/postman.svg"
     ],
     "urlCode": "https://github.com/JoseEnriqueMendo/cookingRecipesWebBE",
     "urlLive": "",
@@ -56,11 +56,11 @@
     "abstractProyect": "Cooking Proyect Web: Página de recetas que permite la creación, búsqueda y edición de recetas de manera eficiente, con funcionalidades como gestión de favoritos y una interfaz amigable para usuarios.",
     "imgProyect": "/imgs/img_cookingRecipesWebFE.png",
     "toolsProyect": [
-      "../src/assets/icons/react.svg",
-      "../src/assets/icons/vite.svg",
-      "../src/assets/icons/html.svg",
-      "../src/assets/icons/tailwind.svg",
-      "../src/assets/icons/redux.svg"
+      "/icons/react.svg",
+      "/icons/vite.svg",
+      "/icons/html.svg",
+      "/icons/tailwind.svg",
+      "/icons/redux.svg"
     ],
     "urlCode": "https://github.com/asem210/CookingFrontend",
     "urlLive": "https://cooking-frontend.vercel.app/cooking/home",
