@@ -2,7 +2,7 @@
   {
     "nameProyect": "Brisas Marinas Backend",
     "abstractProyect": "Brisas Marinas Backend: Servicio integral que gestiona datos para Brisa Admin y Cliente, optimizando la experiencia y operaciones de la cevichería online.",
-    "imgProyect": "../src/assets/imgs/brisasImgBE.png",
+    "imgProyect": "imgs/brisasImgBE.png",
     "toolsProyect": ["../src/assets/icons/js.svg", "../src/assets/icons/postgres.svg"],
     "urlCode": "https://github.com/JoseEnriqueMendo/BrisasMarinasBE",
     "urlLive": "",
@@ -11,7 +11,7 @@
   {
     "nameProyect": "Brisas Marinas Admin Web",
     "abstractProyect": "Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.",
-    "imgProyect": "../src/assets/imgs/brisasMarinasAdm.png",
+    "imgProyect": "imgs/brisasMarinasAdm.png",
     "toolsProyect": [
       "../src/assets/icons/react.svg",
       "../src/assets/icons/vite.svg",
@@ -25,7 +25,7 @@
   {
     "nameProyect": "Brisas Marinas cliente Web",
     "abstractProyect": "Brisas Marinas Cliente Web: Explora y compra platos marinos con navegación intuitiva, mejorando la experiencia y alcanze de la cevichería.",
-    "imgProyect": "/brisasImgBE.png",
+    "imgProyect": "imgs/brisasImgBE.png",
     "toolsProyect": [
       "../src/assets/icons/react.svg",
       "../src/assets/icons/vite.svg",
@@ -40,7 +40,7 @@
   {
     "nameProyect": "Cooking Proyect BE",
     "abstractProyect": "Proyecto Cooking BE: Aloja servicios de  gestión, autenticación de usuarios, el almacenamiento y la búsqueda de recetas, e integra una búsqueda dinámica para una página de recetas.",
-    "imgProyect": "../src/assets/imgs/img_cookingRecipesWebBE.png",
+    "imgProyect": "/imgs/img_cookingRecipesWebBE.png",
     "toolsProyect": [
       "../src/assets/icons/js.svg",
       "../src/assets/icons/postgres.svg",
@@ -54,7 +54,7 @@
   {
     "nameProyect": "Cooking Proyect Web",
     "abstractProyect": "Cooking Proyect Web: Página de recetas que permite la creación, búsqueda y edición de recetas de manera eficiente, con funcionalidades como gestión de favoritos y una interfaz amigable para usuarios.",
-    "imgProyect": "../src/assets/imgs/img_cookingRecipesWebFE.png",
+    "imgProyect": "/imgs/img_cookingRecipesWebFE.png",
     "toolsProyect": [
       "../src/assets/icons/react.svg",
       "../src/assets/icons/vite.svg",
