@@ -1,5 +1,5 @@
-import React from 'react';
 import './ExperienceCard.css';
+import PropTypes from 'prop-types';
 
 export const ExperienceCard = ({ placeWork, position, begin, end, functionalities }) => {
   const pointFunctionalities = () => {
@@ -23,4 +23,11 @@ export const ExperienceCard = ({ placeWork, position, begin, end, functionalitie
       {functionalities && pointFunctionalities()}
     </div>
   );
+};
+ExperienceCard.propTypes = {
+  placeWork: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  begin: PropTypes.string.isRequired,
+  end: PropTypes.string.isRequired,
+  functionalities: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

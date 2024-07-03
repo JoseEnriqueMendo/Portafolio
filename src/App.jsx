@@ -1,35 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { downloadFile, copyText, openEmail } from '../Utils/helpers.js';
+import { useState, useEffect } from 'react';
 import { Tooltip } from 'react-tooltip';
+//import components
 import { ProyectCard } from './components/ProyectCard/ProyectCard';
 import { ExperienceCard } from './components/ExperienceCard/ExperienceCard';
+// import icons
 import { IoIosStarHalf } from 'react-icons/io';
 import { FaBriefcase, FaFileDownload, FaCopy } from 'react-icons/fa';
 import { MdEventAvailable, MdContactPhone, MdEmail, MdSend } from 'react-icons/md';
-import {
-  Post_brisasAdm,
-  Post_brisasBE,
-  Post_brisasCli,
-  Programador_anime,
-  Programador_real,
-} from '../Utils/getImgs.js';
 
-import {
-  Logo_js,
-  Logo_html,
-  Logo_react,
-  Logo_twitter,
-  Logo_linkedin,
-  Logo_github,
-  Logo_vite,
-  Logo_css,
-  Logo_ts,
-  Logo_postgress,
-} from '../Utils/getIcons.js';
-
+import { Programador_anime, Programador_real } from '../Utils/getImgs.js';
+import { Logo_twitter, Logo_linkedin, Logo_github } from '../Utils/getIcons.js';
+import { downloadFile, copyText, openEmail } from '../Utils/helpers.js';
+// import data
+import proyects from './data/proyects.json';
 import './App.css';
+
 export const App = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [dataCard, setDataCard] = useState([]);
+
+  const loadData = () => {
+    setDataCard(proyects);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +30,7 @@ export const App = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
+    loadData();
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -148,39 +140,20 @@ export const App = () => {
         <h3 className="subtitle">
           Proyectos <IoIosStarHalf />
         </h3>
-        <ProyectCard
-          imgProyect={Post_brisasBE}
-          nameProyect={'Brisas Marinas Backend'}
-          abstractProyect={
-            'Brisas Marinas Backend: Servicio integral que gestiona datos para Brisa Admin y Cliente, optimizando la experiencia y operaciones de la cevichería online.'
-          }
-          toolsProyect={[Logo_js, Logo_postgress]}
-          urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasBE'}
-        ></ProyectCard>
-
-        <ProyectCard
-          imgProyect={Post_brisasAdm}
-          nameProyect={'Brisas Marinas Admin Web'}
-          abstractProyect={
-            'Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.'
-          }
-          urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasFE-ADM'}
-          urlLive={'https://brisas-marinas-fe-adm.vercel.app'}
-          toolsProyect={[Logo_react, Logo_vite, Logo_ts, Logo_html, Logo_css]}
-        ></ProyectCard>
-
-        <ProyectCard
-          imgProyect={Post_brisasCli}
-          nameProyect={'Brisas Marinas cliente Web'}
-          abstractProyect={
-            'Brisas Marinas Cliente Web: Explora y compra platos marinos con navegación intuitiva, mejorando la experiencia y alcanze de la cevichería.'
-          }
-          toolsProyect={[Logo_react, Logo_vite, Logo_ts, Logo_html, Logo_css]}
-          urlCode={'https://github.com/JoseEnriqueMendo/BrisasMarinasFE-CLI'}
-          urlLive={'https://brisas-marinas-fe-cli.vercel.app/'}
-        ></ProyectCard>
+        {dataCard.map((item, index) => {
+          return (
+            <ProyectCard
+              key={index}
+              imgProyect={item.imgProyect}
+              nameProyect={item.nameProyect}
+              abstractProyect={item.abstractProyect}
+              toolsProyect={item.toolsProyect}
+              urlCode={item.urlCode}
+              urlLive={item.urlLive}
+            ></ProyectCard>
+          );
+        })}
       </section>
-
       <section id="section-social">
         <h3 className="subtitle">
           Redes Sociales <MdContactPhone />

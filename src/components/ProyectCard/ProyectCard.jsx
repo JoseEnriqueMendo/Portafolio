@@ -2,6 +2,7 @@ import React from 'react';
 import './ProyectCard.css';
 import { FaGithub } from 'react-icons/fa';
 import { FaLink } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 export const ProyectCard = ({
   imgProyect,
@@ -45,4 +46,13 @@ export const ProyectCard = ({
       </div>
     </div>
   );
+};
+
+ProyectCard.propTypes = {
+  imgProyect: PropTypes.string.isRequired,
+  nameProyect: PropTypes.string.isRequired,
+  abstractProyect: PropTypes.string.isRequired,
+  toolsProyect: PropTypes.arrayOf(PropTypes.string).isRequired,
+  urlCode: PropTypes.string,
+  urlLive: PropTypes.string,
 };
