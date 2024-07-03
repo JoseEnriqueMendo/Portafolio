@@ -25,7 +25,7 @@
   {
     "nameProyect": "Brisas Marinas cliente Web",
     "abstractProyect": "Brisas Marinas Cliente Web: Explora y compra platos marinos con navegación intuitiva, mejorando la experiencia y alcanze de la cevichería.",
-    "imgProyect": "../src/assets/imgs/brisasImgCli.png",
+    "imgProyect": "/brisasImgBE.png",
     "toolsProyect": [
       "../src/assets/icons/react.svg",
       "../src/assets/icons/vite.svg",
