@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Tooltip } from 'react-tooltip';
+// import { Tooltip } from 'react-tooltip';
 //import components
 import { ProyectCard } from './components/ProyectCard/ProyectCard';
 import { ExperienceCard } from './components/ExperienceCard/ExperienceCard';
+import SocialContent from './components/SocialContent/SocialContent.jsx';
+import HeadBord from './components/HeadBoard/HeadBord.jsx';
+import IntroductionContent from './components/IntroductionContent/IntroductionContent.jsx';
 // import icons
 import { IoIosStarHalf } from 'react-icons/io';
-import { FaBriefcase, FaFileDownload, FaCopy } from 'react-icons/fa';
-import { MdEventAvailable, MdContactPhone, MdEmail, MdSend } from 'react-icons/md';
+import { FaBriefcase } from 'react-icons/fa';
+import { MdContactPhone } from 'react-icons/md';
 
-import { Programador_anime, Programador_real } from '../Utils/getImgs.js';
 import { Logo_twitter, Logo_linkedin, Logo_github } from '../Utils/getIcons.js';
-import { downloadFile, copyText, openEmail } from '../Utils/helpers.js';
 // import data
 import proyects from './data/proyects.json';
 import './App.css';
@@ -21,6 +22,26 @@ export const App = () => {
 
   const loadData = () => {
     setDataCard(proyects);
+  };
+
+  const handleChange = (event) => {
+    if (event.target.value === 'frontend') {
+      setDataCard(
+        proyects.filter((item) => {
+          return item.type === 'frontend';
+        })
+      );
+      return;
+    }
+    if (event.target.value === 'backend') {
+      setDataCard(
+        proyects.filter((item) => {
+          return item.type === 'backend';
+        })
+      );
+      return;
+    }
+    loadData();
   };
 
   useEffect(() => {
@@ -46,74 +67,11 @@ export const App = () => {
   };
 
   return (
-    <div className="app-container">
+    <main className="app-container">
       <section id="section-introduction">
         <div className="introduction-container">
-          {isVisible && (
-            <div className="headBoard">
-              <div className="img-name-headBoard">
-                <img src={Programador_anime} className="img-headBoard" />
-                <a href="#section-introduction" className="name-headBoard">
-                  Enrique MH
-                </a>
-              </div>
-              <span></span>
-
-              <div className="button-headBoard">
-                <a href="#section-Experience">
-                  Experiencia <FaBriefcase className="center-icon" />
-                </a>
-              </div>
-              <span></span>
-
-              <div className="button-headBoard">
-                <a href="#section-proyects">
-                  Proyectos <IoIosStarHalf className="center-icon" />
-                </a>
-              </div>
-              <span></span>
-
-              <div className="button-headBoard">
-                <a href="#section-social">
-                  Contactos <MdContactPhone className="center-icon" />
-                </a>
-              </div>
-            </div>
-          )}
-
-          <div className="left-introduction-container">
-            <figure className="figure-img-introduction">
-              <img src={Programador_anime} className="img-introduction changeImage" />
-              <img src={Programador_real} className="img-introduction-second changeImage2" />
-            </figure>
-          </div>
-          <div className="rigth-introduction-container">
-            <h1 className="name-introduction">Jose Enrique Mendo H.</h1>
-            <p className="abstract-introduction">
-              ¡Hola! Soy un desarrollador web junior apasionado con conocimientos tanto en el
-              backend como en el frontend.
-            </p>
-
-            <div className="extra-buttons-container">
-              <div className="looking-job-button">
-                <MdEventAvailable className="estado-icon" />
-                Buscando Empleo
-              </div>
-              <div
-                className="cv-button"
-                id='cv-button"'
-                onClick={() => {
-                  downloadFile();
-                }}
-                data-tooltip-id="cv-button-tooltip"
-                data-tooltip-content="Descargar CV"
-              >
-                <FaFileDownload />
-                CV
-                <Tooltip id="cv-button-tooltip" />
-              </div>
-            </div>
-          </div>
+          {isVisible && <HeadBord></HeadBord>}
+          <IntroductionContent></IntroductionContent>
         </div>
       </section>
 
@@ -137,9 +95,17 @@ export const App = () => {
       </section>
 
       <section id="section-proyects">
-        <h3 className="subtitle">
-          Proyectos <IoIosStarHalf />
-        </h3>
+        <div className="Subtitle-Filter">
+          <h3 className="subtitle">
+            Proyectos <IoIosStarHalf />
+          </h3>
+          <select onChange={handleChange}>
+            <option value={'-'}>Todos</option>
+            <option value={'frontend'}>FrontEnd</option>
+            <option value={'backend'}>Backend</option>
+          </select>
+        </div>
+
         {dataCard.map((item, index) => {
           return (
             <ProyectCard
@@ -170,39 +136,9 @@ export const App = () => {
       </section>
 
       <section id="section-email">
-        <h3 className="subtitle">
-          Contáctame <MdEmail />
-        </h3>
-        <div className="email-container">
-          <div className="showEmail" id="email">
-            enriquemendohuapaya@gmail.com
-          </div>
-
-          <div
-            className="goEmail"
-            onClick={() => {
-              openEmail(document.getElementById('email').textContent);
-            }}
-            data-tooltip-id="goEmail-tooltip"
-            data-tooltip-content="Ir al correo"
-          >
-            <MdSend className="iconEmail" />
-            <Tooltip id="goEmail-tooltip" className="tooltip-style" />
-          </div>
-          <div
-            className="copyEmail"
-            onClick={() => {
-              copyText(document.getElementById('email').textContent);
-            }}
-            data-tooltip-id="copyEmail-tooltip"
-            data-tooltip-content="Copiar correo"
-          >
-            <Tooltip id="copyEmail-tooltip" />
-            <FaCopy className="iconEmail" />
-          </div>
-        </div>
+        <SocialContent></SocialContent>
       </section>
-    </div>
+    </main>
   );
 };
 

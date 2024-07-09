@@ -247,6 +247,26 @@ section {
   animation: changeImage infinite 4s normal;
 }
 
+.Subtitle-Filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Subtitle-Filter > select {
+  margin-right: 50px;
+  background-color: #f79258;
+  color: white;
+  padding: 8px 25px;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 14px;
+}
+
+.Subtitle-Filter > select > option {
+  text-align: left;
+}
+
 @keyframes changeImage {
   0% {
     opacity: 1;
