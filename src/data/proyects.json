@@ -9,6 +9,20 @@
     "type": "backend"
   },
   {
+    "nameProyect": "Estatery Landing page",
+    "abstractProyect": "Estatery Landing Page es una plataforma informativa para la compra, venta y renta de propiedades, mostrando ofertas disponibles de alquileres.",
+    "imgProyect": "imgs/landingPageScreen.png",
+    "toolsProyect": [
+      "/icons/js.svg",
+      "/icons/react.svg",
+      "/icons/tailwind.svg",
+      "/icons/vite.svg"
+    ],
+    "urlCode": "https://github.com/JoseEnriqueMendo/EstateryLandingPage",
+    "urlLive": "https://estatery-landin-git-49a8bb-jose-enrique-mendo-huapayas-projects.vercel.app/home",
+    "type": "frontend"
+  },
+  {
     "nameProyect": "Brisas Marinas Admin Web",
     "abstractProyect": "Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.",
     "imgProyect": "imgs/brisasMarinasAdm.png",
