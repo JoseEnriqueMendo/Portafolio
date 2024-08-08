@@ -23,6 +23,22 @@
     "type": "frontend"
   },
   {
+    "nameProyect": "SoundBox",
+    "abstractProyect": "SoundBox es una plataforma web de música que utiliza la API de Spotify para permitir a los usuarios explorar y gestionar playlists y álbumes. Ofrece una experiencia intuitiva para descubrir y compartir música.",
+    "imgProyect": "imgs/soundoBox_img.png",
+    "toolsProyect": [
+      "/icons/ts.svg",
+      "/icons/react.svg",
+      "/icons/tailwind.svg",
+      "/icons/vite.svg",
+      "/icons/redux.svg"
+    ],
+    "urlCode": "https://github.com/JoseEnriqueMendo/MusicPro",
+    "urlLive": "https://soundbox-sigma.vercel.app/musicPro/home",
+    "type": "frontend"
+  },
+
+  {
     "nameProyect": "Brisas Marinas Admin Web",
     "abstractProyect": "Brisas Marinas Admin Web: gestiona menú, categorías y pedidos de una cevichería online, facilitando la administración y experiencia del usuario.",
     "imgProyect": "imgs/brisasMarinasAdm.png",
